@@ -1,36 +1,74 @@
---- 
-interface Props {
-	title: string;
-}
+---
+import Junglestar from '@components/Junglestar.astro'
+import Header from '@components/Header.astro'
+import Footer from '@components/Footer.astro'
+import Stylo from '@components/Stylo.astro'
+import * as siteData from '@data/site.json'
+import * as repoData from 'package.json'
+import GoogleAnalytics from '@scripts/GoogleAnalytics.astro'
 
-const { title } = Astro.props;
+interface Props {
+	pageTitle: string
+	ogImage?: string
+	bodyClass: string
+	mainClass: string
+	pageTLDR: string
+}
+const { bodyClass, mainClass, pageTitle, ogImage, pageTLDR } = Astro.props
+
+const makeTitle = siteData.brandshort + ' ' + pageTitle
+const makeDescription = pageTLDR
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
+		<Junglestar />
+		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+
+		<title>{makeTitle}</title>
+
+		<meta
+			name="description"
+			content={pageTitle + ' | ' + siteData.description}
+		/>
+		<meta name="format-detection" content="telephone=no" />
+		<link rel="icon" type="image/svg+xml" href="/favicons/j.svg" />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- ROKS REPO -->
+		<meta name="version" content={repoData.version} />
+
+		<!-- ROKS OG -->
+		<meta property="og:url" content={Astro.site} />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={makeTitle} />
+		<meta property="og:description" content={makeDescription} />
+		<meta property="og:image" content={ogImage} />
+
+		<!-- ROKS TWITTER -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.site} />
+		<meta name="twitter:title" content={makeTitle} />
+		<meta name="twitter:description" content={makeDescription} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<slot name="head" />
 	</head>
-	<body>
-		<slot />
+
+	<body class={bodyClass}>
+		<div id="top"></div>
+		<Header />
+		<main class={mainClass}>
+			<slot />
+		</main>
+
+		<Footer />
+		<slot name="after-footer" />
+
+		<GoogleAnalytics />
+		<Stylo />
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-</style>

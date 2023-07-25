@@ -1,0 +1,70 @@
+---
+---
+
+<nav>
+  <a
+    role="button"
+    class="contrast outline"
+    title="residential"
+    href="/residential/">residential</a
+  >
+
+  <a
+    role="button"
+    class="contrast outline"
+    title="commercial"
+    href="/commercial/">commercial</a
+  >
+
+  <a role="button" class="contrast outline" title="public" href="/public/"
+    >public</a
+  >
+
+  <a
+    role="button"
+    class="contrast outline"
+    title="Rocco Marosi is available everywhere on planet earth excluding Antartica! | rocco.marosi@gmail.com"
+    href="mailto:rocco.marosi@gmail.com"
+    target="_blank"
+    class="open_in_new_window"
+    rel="noopener">
+    Get a quote
+  </a>
+</nav>
+<style lang="scss">
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    padding: var(--corner_distance);
+    right: var(--corner_distance);
+    left: var(--corner_distance);
+    bottom: calc(var(--corner_distance) * 1.75);
+    @media only screen and (min-width: 641px) {
+      bottom: calc(var(--corner_distance) * 1);
+      align-items: end;
+    }
+    @media (orientation: landscape) {
+      flex-direction: row;
+    }
+  }
+
+  a {
+    text-transform: uppercase;
+    min-width: 220px;
+    max-width: fit-content;
+    border-radius: 0 !important;
+    margin: 5px 0 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    @media only screen and (min-width: 641px) {
+      text-align: right !important;
+      min-width: 250px;
+    }
+    @media (orientation: landscape) {
+      width: fit-content;
+      min-width: fit-content;
+    }
+  }
+</style>
