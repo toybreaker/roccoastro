@@ -42,11 +42,17 @@
     left: var(--corner_distance);
     bottom: calc(var(--corner_distance) * 1.75);
     @media only screen and (min-width: 641px) {
-      bottom: calc(var(--corner_distance) * 1);
+      bottom: 0;
+      right: 0;
+      left: 0;
       align-items: end;
     }
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (max-height: 450px) {
       flex-direction: row;
+      bottom: 1rem;
+      right: 1.5rem;
+      left: 1.5rem;
+      justify-content: space-around !important;
     }
   }
 
@@ -55,6 +61,7 @@
     min-width: 220px;
     max-width: fit-content;
     border-radius: 0 !important;
+    border-width: 2px !important;
     margin: 5px 0 !important;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -62,9 +69,11 @@
       text-align: right !important;
       min-width: 250px;
     }
-    @media (orientation: landscape) {
+    @media (orientation: landscape) and (max-height: 450px) {
       width: fit-content;
       min-width: fit-content;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
   }
 </style>

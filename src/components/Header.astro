@@ -3,12 +3,10 @@ import Nav from '@components/Nav.astro'
 ---
 
 <header>
-  <div class="title">
-    <a title="back to home page" href="/">
-      <h1 class="who">rocco <br />marosi</h1>
-      <span class="what">architecture <br />photography</span>
-    </a>
-  </div>
+  <a href="/" title="back to home page">
+    <h1 class="who">rocco <br />marosi</h1>
+    <span class="what">architecture <br />photography</span>
+  </a>
   <Nav />
 </header>
 <style lang="scss">
@@ -18,14 +16,6 @@ import Nav from '@components/Nav.astro'
     padding: 0;
     width: 100vw !important;
     height: 100vh !important;
-  }
-  .title {
-    width: 100%;
-    height: 100%;
-    font-weight: 300;
-    font-size: clamp(3vw, 30px, 100px);
-    line-height: 1;
-
     &:before {
       content: '';
       position: absolute;
@@ -51,18 +41,24 @@ import Nav from '@components/Nav.astro'
   }
 
   a {
+    font-size: clamp(3vw, 30px, 100px);
     width: 100%;
     position: absolute;
     text-align: center;
-    top: calc(var(--corner_distance) * 2);
+    top: calc(var(--corner_distance) * 3);
     padding-left: var(--corner_distance);
     padding-right: var(--corner_distance);
     left: 0;
+    @media only screen and (min-width: 641px) {
+      text-align: left;
+      top: var(--corner_distance);
+    }
     &:hover {
       text-decoration: none;
     }
-    @media (orientation: landscape) {
-      top: calc(var(--corner_distance) * 1);
+    @media (orientation: landscape) and (max-height: 450px) {
+      top: calc(var(--corner_distance) * 2);
+      text-align: center;
     }
   }
 
@@ -80,10 +76,8 @@ import Nav from '@components/Nav.astro'
     padding-top: 4px;
   }
   .who {
-    margin: 0;
-    padding: 0;
-    font-size: clamp(6vw, 58px, 150px);
+    margin: 0 !important;
+    font-size: clamp(3rem, 2.5836rem + 1.7532vw, 4.6875rem);
     line-height: 1;
-    padding-top: var(--corner_distance);
   }
 </style>

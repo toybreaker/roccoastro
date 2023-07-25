@@ -75,6 +75,7 @@ import '../assets/css/pico.css'
   @media (min-width: 1200px) {
     :root {
       --font-size: 26px;
+      --corner_distance: calc(3.5vw + 3.5vh);
     }
   }
   @media (min-width: 1440px) {
@@ -318,37 +319,6 @@ import '../assets/css/pico.css'
     }
   }
 
-  .toc {
-    position: relative;
-    width: fit-content;
-    max-width: 900px;
-    padding: var(--space_small) calc(var(--space) / 2) var(--space_small) 0;
-    margin: 3vw auto;
-    border: 2px solid var(--primary-focus);
-    border-radius: var(--space_small);
-    & > ul {
-      margin: 0 auto;
-    }
-
-    span {
-      display: block;
-      padding: 0 0 var(--space_small) var(--space_small);
-      //vert?
-      writing-mode: vertical-lr;
-      transform: rotate(180deg);
-      position: absolute;
-      left: -2rem;
-      top: 0;
-    }
-    ul {
-      margin-bottom: 0;
-
-      li {
-        list-style: none;
-        text-transform: uppercase;
-      }
-    }
-  }
   a.contrast {
     white-space: nowrap;
   }
