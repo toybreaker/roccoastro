@@ -3,7 +3,7 @@ import '../assets/css/pico.css'
 ---
 
 <style is:global lang="scss">
-  /* Light-blue Light scheme (Default) */
+  /* Light scheme (Default) */
   /* Can be forced with data-theme="light" */
   [data-theme='light'],
   :root:not([data-theme='dark']) {
@@ -14,7 +14,7 @@ import '../assets/css/pico.css'
     --soft_overlay_color: hsla(0, 0%, 0%, 0.05);
   }
 
-  /* Light-blue Dark scheme (Auto) */
+  /* Dark scheme (Auto) */
   /* Automatically enabled if user has Dark mode enabled */
   @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
@@ -26,7 +26,7 @@ import '../assets/css/pico.css'
     }
   }
 
-  /* Light-blue Dark scheme (Forced) */
+  /* Dark scheme (Forced) */
   /* Enabled if forced with data-theme="dark" */
   [data-theme='dark'] {
     --primary: #546e7a;
@@ -36,7 +36,7 @@ import '../assets/css/pico.css'
     --soft_overlay_color: hsla(0, 0%, 0%, 0.25);
   }
 
-  /* Light-blue (Common styles) */
+  /* (Common styles) */
   :root {
     --font-size: 20px; //fallback?!
     --form-element-active-border-color: var(--primary);

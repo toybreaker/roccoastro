@@ -1,0 +1,116 @@
+{
+  "projects": [
+    {
+      "building": "ArtScience Museum",
+      "location": "Marina bay",
+      "country": "Singapore",
+      "architect": "",
+      "year": "2013",
+      "photo": "130728-photographer-rocco-marosi-4287"
+    },
+    {
+      "building": "City Scape",
+      "location": "Bangkok",
+      "country": "Thailand",
+      "architect": "",
+      "year": "2011",
+      "photo": "110823-photographer-rocco-marosi-5067"
+    },
+    {
+      "building": "City Scape",
+      "location": "Marina bay",
+      "country": "Singapore",
+      "architect": "",
+      "year": "2013",
+      "photo": "130728-photographer-rocco-marosi-4115"
+    },
+    {
+      "building": "City Scape",
+      "location": "Honkong",
+      "country": "",
+      "architect": "",
+      "year": "2012",
+      "photo": "120124-photographer-rocco-marosi-8162"
+    },
+    {
+      "building": "Tomas Saraceno Installation",
+      "location": "Genova",
+      "country": "Italy",
+      "architect": "",
+      "year": "2007",
+      "photo": "071020-photographer-rocco-marosi-5189"
+    },
+    {
+      "building": "City Scape",
+      "location": "Bangkok",
+      "country": "Thailand",
+      "architect": "",
+      "year": "2011",
+      "photo": "110811-photographer-rocco-marosi-4398"
+    },
+    {
+      "building": "Unicredit HQ",
+      "location": "Milano",
+      "country": "Italy",
+      "architect": "",
+      "year": "2013",
+      "photo": "130210-photo-rocco-marosi-1904"
+    },
+    {
+      "building": "Marina Bay Sands",
+      "location": "Marina bay",
+      "country": "Singapore",
+      "architect": "",
+      "year": "2013",
+      "photo": "130728-photographer-rocco-marosi-4012"
+    },
+    {
+      "building": "Palazzo Ducale",
+      "location": "Genova",
+      "country": "Italy",
+      "architect": "",
+      "year": "2012",
+      "photo": "071019-photographer-rocco-marosi-4779-2"
+    },
+    {
+      "building": "The River South Tower",
+      "location": "Bangkok",
+      "country": "Thailand",
+      "architect": "",
+      "year": "2011",
+      "photo": "110903-photographer-rocco-marosi-5552"
+    },
+    {
+      "building": "Unicredit HQ",
+      "location": "Milano",
+      "country": "Italy",
+      "architect": "",
+      "year": "2013",
+      "photo": "130210-photo-rocco-marosi-1968"
+    },
+    {
+      "building": "Queen Sirikit Park",
+      "location": "Bangkok",
+      "country": "Thailand",
+      "architect": "",
+      "year": "2012",
+      "photo": "120211-photographer-rocco-marosi-8890"
+    },
+    {
+      "building": "Interlace",
+      "location": "Singapore",
+      "country": "",
+      "architect": "Ole Scheeren",
+      "year": "2013",
+      "photo": "130729-photographer-rocco-marosi-4315"
+    },
+    {
+      "building": "Unicredit HQ",
+      "location": "Milano",
+      "country": "Italy",
+      "architect": "",
+      "year": "2013",
+      "photo": "130210-photo-rocco-marosi-1931"
+    }
+  ]
+}

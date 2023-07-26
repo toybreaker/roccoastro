@@ -1,0 +1,76 @@
+{
+  "projects": [
+    {
+      "building": "Muchmore",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "Landi Designs",
+      "year": "2013",
+      "photo": "130622-photographer-rocco-marosi-3342"
+    },
+    {
+      "building": "Rumah Tangga",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "Barbara Agostini",
+      "year": "2018",
+      "photo": "181028_photo_rocco_marosi_MG_1491-2"
+    },
+    {
+      "building": "Castaway",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "Landi Designs",
+      "year": "2010",
+      "photo": "120719-photographer-rocco-marosi-castaway-02"
+    },
+    {
+      "building": "Rumah Tangga",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "Barbara Agostini",
+      "year": "2018",
+      "photo": "181026_photo_rocco_marosi_MG_1343"
+    },
+    {
+      "building": "Aska",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "J.Bergougnoux",
+      "year": "2013",
+      "photo": "130820-photographer-rocco-marosi-4670"
+    },
+    {
+      "building": "Sands",
+      "location": "Marina Bay",
+      "country": "Singapore",
+      "architect": "Safdie Architects",
+      "year": "2013",
+      "photo": "130728-photographer-rocco-marosi-4300"
+    },
+    {
+      "building": "Muchmore",
+      "location": "Bali",
+      "country": "Indonesia",
+      "architect": "Landi Designs",
+      "year": "2013",
+      "photo": "130616-photographer-rocco-marosi-3026"
+    },
+    {
+      "building": "Dragon year",
+      "location": "Honk Kong",
+      "country": "China",
+      "architect": "",
+      "year": "2012",
+      "photo": "120124-photographer-rocco-marosi-8165"
+    },
+    {
+      "building": "Unicredit HQ",
+      "location": "Milano",
+      "country": "Italy",
+      "architect": "César Pelli",
+      "year": "2013",
+      "photo": "130210-photo-rocco-marosi-1968"
+    }
+  ]
+}

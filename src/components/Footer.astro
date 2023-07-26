@@ -2,62 +2,81 @@
 import { Icon } from 'astro-icon'
 ---
 
-<footer class="container">
-  <a title="back to top" href="#top">
-    <Icon name="up" />
-  </a>
-
-  <a class="title" href="/" title="back to home page">
-    <h2 class="h3">Rocco Marosi</h2>
-    <div class="footer_what">Architecture Photography</div>
-  </a>
-
-  <div class="contacts">
-    <a
-      title="send me an email"
-      class="footer_list_link mail open_in_new_window"
-      href="mailto:rocco.marosi@gmail.com"
-      target="_blank"
-      rel="noopener">
-      <Icon name="mail" />
+<footer>
+  <div class="container">
+    <a class="to_top" title="back to top" href="#top">
+      <Icon name="up" />
     </a>
 
-    <a
-      title="connect using instagram"
-      class="footer_list_link gplus open_in_new_window"
-      href="https://www.instagram.com/rocco.marosi"
-      target="_blank"
-      rel="noopener">
-      <Icon name="instagram" />
+    <a class="title" href="/" title="back to home page">
+      <h2 class="h3">Rocco Marosi</h2>
+      <div class="footer_what">Architecture Photography</div>
     </a>
 
-    <a
-      title="make QR code big"
-      class="footer_list_link qr_switch"
-      id="qr_switch">
-      <Icon name="qr" />
-    </a>
-  </div>
+    <div class="contacts">
+      <a
+        title="send me an email"
+        class="footer_list_link mail open_in_new_window"
+        href="mailto:rocco.marosi@gmail.com"
+        target="_blank"
+        rel="noopener">
+        <Icon name="mail" />
+      </a>
 
-  <div class="copyright">
-    2023 © Rocco Marosi. All rights reserved. <br />Powered by <a
-      title="website powered by Junglestar, a one stop shop for all your internet needs - check it out"
-      href="https://junglestar.org"
-      target="_blank"
-      class="open_in_new_window"
-      rel="noopener"
-      >Junglestar.
-    </a>
+      <a
+        title="connect using instagram"
+        class="footer_list_link gplus open_in_new_window"
+        href="https://www.instagram.com/rocco.marosi"
+        target="_blank"
+        rel="noopener">
+        <Icon name="instagram" />
+      </a>
+
+      <a
+        title="make QR code big"
+        class="footer_list_link qr_switch"
+        id="qr_switch">
+        <Icon name="qr" />
+      </a>
+    </div>
+
+    <div class="copyright">
+      2023 © Rocco Marosi. <br />All rights reserved. <br />Powered by <a
+        title="website powered by Junglestar, a one stop shop for all your internet needs - check it out"
+        href="https://junglestar.org"
+        target="_blank"
+        class="open_in_new_window"
+        rel="noopener"
+        >Junglestar.
+      </a>
+    </div>
   </div>
 </footer>
 
 <style>
+  footer {
+    background-color: var(--primary-inverse) !important;
+    color: var(--primary) !important;
+    height: 100vh;
+  }
+  .container {
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    @media only screen and (min-width: 641px) {
+      align-items: flex-start;
+    }
+  }
   svg {
     width: 50px;
     height: 50px;
   }
   h2 {
     margin: 0 !important;
+    color: var(--primary) !important;
   }
   a:hover {
     text-decoration: none;
@@ -69,5 +88,14 @@ import { Icon } from 'astro-icon'
   .copyright {
     padding-top: var(--spacing);
     font-size: initial;
+    text-align: center;
+    @media only screen and (min-width: 641px) {
+      text-align: left;
+    }
+  }
+  .to_top {
+    position: absolute;
+    top: 0;
+    right: var(--spacing);
   }
 </style>

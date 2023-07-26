@@ -1,0 +1,37 @@
+---
+import Layout from '@layouts/Layout.astro'
+import { Image } from 'astro:assets'
+import { getCollection } from 'astro:content'
+const jobs = await getCollection('residential')
+
+interface Props {
+  bodyClass: string
+  mainClass: string
+  pageTitle: string
+  pageTLDR: string
+}
+
+const bodyClass = 'residential'
+const mainClass = 'no_padding'
+const pageTitle = 'Rocco Marosi'
+const pageTLDR =
+  'In today residential markets, HIGH QUALITY PHOTOGRAPHY is paramount to compete and get noticed.'
+---
+
+<Layout
+  bodyClass={bodyClass}
+  pageTitle={pageTitle}
+  mainClass={mainClass}
+  pageTLDR={pageTLDR}>
+  <div class="container">
+    <ul>
+      {
+        jobs.map((job) => (
+          <li>
+            <a href={`/residential/${job.slug}`}>{job.data.building}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

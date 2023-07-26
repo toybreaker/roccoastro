@@ -1,0 +1,13 @@
+---
+building: Rumah Tangga
+location: Bali
+country: Indonesia
+architect: Barbara Agostini
+year: 2018
+photos:
+  - 181028_photo_rocco_marosi_MG_1491-2.jpg
+  - 181026_photo_rocco_marosi_MG_1343.jpg
+  - 181026_photo_rocco_marosi_MG_1361.jpg
+  - 181028_photo_rocco_marosi_MG_1485.jpg
+  - 130622-photographer-rocco-marosi-3342.jpg
+---
