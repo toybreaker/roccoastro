@@ -1,0 +1,17 @@
+---
+building: Cooled Conservatories
+location: Gardens by the Bay
+country: Singapore
+architect: Wilkinson Eyre
+year: 2012
+cover: './130728-photographer-rocco-marosi-4292.jpg'
+---
+
+import p01 from './130728-photographer-rocco-marosi-4292.jpg'
+import p02 from './130728-photographer-rocco-marosi-4230.jpg'
+import p03 from './130728-photographer-rocco-marosi-4203.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />

@@ -1,0 +1,13 @@
+---
+building: Art Clinic
+location: Genova
+country: Italy
+architect:
+year: 2007
+cover: './071029-photographer-rocco-marosi-4940.jpg'
+---
+
+import p01 from './071029-photographer-rocco-marosi-4940.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />

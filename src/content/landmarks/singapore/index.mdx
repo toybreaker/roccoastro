@@ -1,0 +1,19 @@
+---
+building: Skyline
+location: Marina Bay
+country: Singapore
+architect:
+year: 2012
+cover: './130728-photographer-rocco-marosi-4300.jpg'
+---
+
+import p01 from './130728-photographer-rocco-marosi-4300.jpg'
+import p02 from './130728-photographer-rocco-marosi-4115.jpg'
+import p03 from './130728-photographer-rocco-marosi-4046.jpg'
+import p04 from './130728-photographer-rocco-marosi-4284.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />
+<Slide p={p04} alt={frontmatter.building} />

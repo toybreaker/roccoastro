@@ -1,0 +1,15 @@
+---
+building: Pura Vida Store
+location: Bali
+country: Indonesia
+architect:
+year: 2008
+cover: './080717-photographer-rocco-marosi-8163.jpg'
+---
+
+import p01 from './080717-photographer-rocco-marosi-8163.jpg'
+import p02 from './080717-photographer-rocco-marosi-8013.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />

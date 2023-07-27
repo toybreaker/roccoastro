@@ -1,0 +1,15 @@
+---
+building: Tomas Saraceno
+location: Genova
+country: Italy
+architect: Tomas Saraceno
+year: 2012
+cover: './071021-photographer-rocco-marosi-5189.jpg'
+---
+
+import p01 from './071019-photographer-rocco-marosi-4767.jpg'
+import p02 from './071021-photographer-rocco-marosi-5189.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />

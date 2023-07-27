@@ -1,0 +1,17 @@
+---
+building: River Skyline
+location: Bangkok
+country: Thailand
+architect:
+year:
+cover: './110811-photographer-rocco-marosi-4398.jpg'
+---
+
+import p01 from './110811-photographer-rocco-marosi-4398.jpg'
+import p02 from './120700-photographer-rocco-marosi-5067.jpg'
+import p03 from './120700-photographer-rocco-marosi-5070.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />

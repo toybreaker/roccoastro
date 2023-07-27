@@ -2,7 +2,7 @@
 import Layout from '@layouts/Layout.astro'
 import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
-const jobs = await getCollection('residential')
+const jobs = await getCollection('landmarks')
 
 interface Props {
   bodyClass: string
@@ -11,11 +11,10 @@ interface Props {
   pageTLDR: string
 }
 
-const bodyClass = 'residential'
+const bodyClass = 'landmarks'
 const mainClass = 'no_padding'
 const pageTitle = 'Rocco Marosi'
-const pageTLDR =
-  'In today residential markets, HIGH QUALITY PHOTOGRAPHY is paramount to compete and get noticed.'
+const pageTLDR = 'Try do this with the latest iPhone!'
 ---
 
 <Layout
@@ -28,7 +27,7 @@ const pageTLDR =
       {
         jobs.map((job) => (
           <li>
-            <a href={`/residential/${job.slug}`}>
+            <a href={`/landmarks/${job.slug}`}>
               {job.data.building}, {job.data.location}, {job.data.country}
             </a>
           </li>

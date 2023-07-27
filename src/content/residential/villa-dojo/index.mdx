@@ -5,7 +5,13 @@ country: Indonesia
 architect: J.Bergougnoux
 year: 2013
 cover: './130818-photographer-rocco-marosi-4589.jpg'
-photos:
-  - 130818-photographer-rocco-marosi-4589.jpg
-  - 130818-photographer-rocco-marosi-4580.jpg
 ---
+
+import p01 from './130818-photographer-rocco-marosi-4589.jpg'
+import p02 from './130818-photographer-rocco-marosi-4580.jpg'
+import p03 from './130818-photographer-rocco-marosi-4583.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />

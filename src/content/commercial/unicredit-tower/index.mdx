@@ -1,0 +1,17 @@
+---
+building: Unicredit Tower
+location: Milano
+country: Italy
+architect: César Pelli
+year: 2013
+cover: './130210-photo-rocco-marosi-1904.jpg'
+---
+
+import p01 from './130210-photo-rocco-marosi-1904.jpg'
+import p02 from './130210-photo-rocco-marosi-1968.jpg'
+import p03 from './130210-photo-rocco-marosi-1931.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />

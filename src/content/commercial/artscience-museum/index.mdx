@@ -1,0 +1,15 @@
+---
+building: ArtScience Museum
+location: Marina Bay Sands
+country: Singapore
+architect: Moshe Safdie
+year: 2011
+cover: './130728-photographer-rocco-marosi-4248.jpg'
+---
+
+import p01 from './130728-photographer-rocco-marosi-4248.jpg'
+import p02 from './130728-photographer-rocco-marosi-4287.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />

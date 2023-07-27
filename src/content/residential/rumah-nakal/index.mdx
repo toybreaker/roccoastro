@@ -1,0 +1,19 @@
+---
+building: Rumah Nakal
+location: Bali
+country: Indonesia
+architect: Barbara Agostini
+year: 2018
+cover: './181028_photo_rocco_marosi_MG_1491-2.jpg'
+---
+
+import p01 from './181028_photo_rocco_marosi_MG_1491-2.jpg'
+import p02 from './181026_photo_rocco_marosi_MG_1343.jpg'
+import p03 from './181026_photo_rocco_marosi_MG_1361.jpg'
+import p04 from './181028_photo_rocco_marosi_MG_1485.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />
+<Slide p={p04} alt={frontmatter.building} />

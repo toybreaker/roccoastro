@@ -1,0 +1,19 @@
+---
+building: Ritz Carlton
+location: Bali
+country: Indonesia
+architect:
+year: 2008
+cover: './080122-photographer-rocco-marosi-0850.jpg'
+---
+
+import p01 from './080122-photographer-rocco-marosi-0850.jpg'
+import p02 from './080122-photographer-rocco-marosi-0857.jpg'
+import p03 from './080122-photographer-rocco-marosi-0854.jpg'
+import p04 from './080122-photographer-rocco-marosi-0856.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />
+<Slide p={p04} alt={frontmatter.building} />

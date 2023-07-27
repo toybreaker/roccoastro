@@ -4,7 +4,7 @@ import Layout from '@layouts/Layout.astro'
 import { Image } from 'astro:assets'
 
 export async function getStaticPaths() {
-  const posts = await getCollection('residential', ({ data }) => {
+  const posts = await getCollection('commercial', ({ data }) => {
     return data.draft !== true
   })
 
@@ -15,12 +15,12 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  post: CollectionEntry<'residential'>
+  post: CollectionEntry<'commercial'>
 }
 
 const { post } = Astro.props
 const { Content } = await post.render()
-const bodyClass = 'residential'
+const bodyClass = 'commercial'
 const mainClass = ''
 const pageTLDR = ''
 const pageTitle = ''
