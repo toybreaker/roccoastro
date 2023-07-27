@@ -1,0 +1,55 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+import Layout from '@layouts/Layout.astro'
+import { Image } from 'astro:assets'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('residential', ({ data }) => {
+    return data.draft !== true
+  })
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }))
+}
+
+interface Props {
+  post: CollectionEntry<'residential'>
+}
+
+const { post } = Astro.props
+const { Content } = await post.render()
+const bodyClass = 'residential'
+const mainClass = ''
+const pageTLDR = ''
+const pageTitle = ''
+---
+
+<Layout
+  {...post.data}
+  mainClass={mainClass}
+  bodyClass={bodyClass}
+  pageTitle={pageTitle}
+  pageTLDR={pageTLDR}>
+  <div class="container">
+    <h2>{post.data.building}</h2>
+    <div><small>Architect:</small> {post.data.architect}</div>
+    <div>
+      <small>Location:</small>
+      {post.data.location}, {post.data.country}
+    </div>
+    <div><small>Built year:</small> {post.data.year}</div>
+    <br />
+  </div>
+  <Content />
+</Layout>
+
+<style lang="scss">
+  .container {
+    padding-bottom: var(--spacing);
+  }
+  small {
+    opacity: 0.75;
+  }
+</style>

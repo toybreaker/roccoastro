@@ -5,8 +5,6 @@ import { Image } from 'astro:assets'
 
 const allProjects = data.projects
 const projects = allProjects
-// const imgFullUrl = '../assets/p/' + projects.photo
-// console.log(imgFullUrl[0])
 
 interface Props {
   bodyClass: string
@@ -32,14 +30,6 @@ const pageTLDR =
       projects.map((project) => (
         <>
           <div>
-            <Image
-              src={'./src/assets/p/' + project.photo + '.jpg'}
-              alt="KALA SURFCAMP is built to deliver a memorable surfing holiday"
-              format="avif"
-              quality="mid"
-              width={1920}
-              height={1280}
-            />
             <small>
               <span>{project.building}</span>
               <span>{project.location}</span>

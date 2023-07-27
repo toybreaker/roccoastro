@@ -1,7 +1,9 @@
-import { defineConfig } from 'astro/config'
-import partytown from '@astrojs/partytown'
-import sitemap from '@astrojs/sitemap'
-import robotsTxt from 'astro-robots-txt'
+import { defineConfig } from 'astro/config';
+import partytown from '@astrojs/partytown';
+import sitemap from '@astrojs/sitemap';
+import robotsTxt from 'astro-robots-txt';
+
+import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,17 +21,13 @@ export default defineConfig({
     // inline all stylesheets:
     inlineStylesheets: 'always'
   },
-  integrations: [
-    partytown({
-      // Example: Add dataLayer.push as a forwarding-event.
-      config: {
-        forward: ['dataLayer.push']
-      }
-    }),
-    sitemap(),
-    robotsTxt()
-  ],
+  integrations: [partytown({
+    // Example: Add dataLayer.push as a forwarding-event.
+    config: {
+      forward: ['dataLayer.push']
+    }
+  }), sitemap(), robotsTxt(), mdx()],
   outDir: './dist',
   site: 'https://roccomarosi.com/',
   base: '/'
-})
+});

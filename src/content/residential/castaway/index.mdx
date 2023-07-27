@@ -1,0 +1,15 @@
+---
+building: Castaway
+location: Bali
+country: Indonesia
+architect: Landi Designs
+year: 2012
+cover: './120607-photographer-rocco-marosi-1042.jpg'
+---
+
+import p01 from './120607-photographer-rocco-marosi-1042.jpg'
+import p02 from './120719-photographer-rocco-marosi-castaway-02.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />

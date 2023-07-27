@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets'
+
+export interface Props {
+  p: any
+  alt: any
+  quality?: string | 'mid'
+}
+
+const { p, alt, quality } = Astro.props
+---
+
+<Image src={p} width={1920} alt={alt} quality={quality} format="avif" />
+
+<style lang="scss">
+  img {
+    max-width: 98vw;
+    margin: 0 1vw !important;
+    padding-bottom: 1vw;
+  }
+</style>
