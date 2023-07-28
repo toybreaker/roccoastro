@@ -1,13 +1,16 @@
 {
   "name": "roccoastro",
   "type": "module",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "scripts": {
     "dev": "astro dev",
+    "check": "astro check --watch & astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "buildcheck": "astro check && tsc --noEmit && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
   "dependencies": {
     "@astrojs/mdx": "^0.19.7",
