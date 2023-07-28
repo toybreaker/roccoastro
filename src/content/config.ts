@@ -3,7 +3,7 @@ import { z, defineCollection } from 'astro:content'
 const jobs = defineCollection({
   schema: ({ image }) =>
     z.object({
-      building: z.string().optional().nullable(),
+      building: z.string(),
       location: z.string().optional().nullable(),
       country: z.string().optional().nullable(),
       cover: z.string(image()),

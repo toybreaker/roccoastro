@@ -13,7 +13,7 @@ interface Props {
 
 const bodyClass = 'residential'
 const mainClass = 'no_padding'
-const pageTitle = 'Rocco Marosi'
+const pageTitle = 'Architecture Photography | Residential'
 const pageTLDR =
   'In today residential markets, HIGH QUALITY PHOTOGRAPHY is paramount to compete and get noticed.'
 ---
@@ -22,18 +22,24 @@ const pageTLDR =
   bodyClass={bodyClass}
   pageTitle={pageTitle}
   mainClass={mainClass}
-  pageTLDR={pageTLDR}>
+  pageTLDR={pageTLDR}
+  ogImage="../og_residential.jpg">
   <div class="container">
-    <ul>
-      {
-        jobs.map((job) => (
-          <li>
-            <a href={`/residential/${job.slug}`}>
-              {job.data.building}, {job.data.location}, {job.data.country}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      jobs.map((job) => (
+        <div>
+          <a href={`/residential/${job.slug}`}>
+            <Image
+              src={job.data.cover}
+              alt={job.data.building}
+              width={1920}
+              height={1280}
+            />
+            <br />
+            {job.data.building}, {job.data.location}, {job.data.country}
+          </a>
+        </div>
+      ))
+    }
   </div>
 </Layout>

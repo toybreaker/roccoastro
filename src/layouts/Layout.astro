@@ -8,67 +8,64 @@ import * as repoData from 'package.json'
 import GoogleAnalytics from '@scripts/GoogleAnalytics.astro'
 
 interface Props {
-	pageTitle: string
-	ogImage?: string
-	bodyClass: string
-	mainClass: string
-	pageTLDR: string
+  pageTitle: string
+  pageTLDR: string
+  bodyClass: string
+  mainClass: string
+  ogImage?: string
 }
-const { bodyClass, mainClass, pageTitle, ogImage, pageTLDR } = Astro.props
+const { pageTitle, pageTLDR, bodyClass, mainClass, ogImage } = Astro.props
 
-const makeTitle = siteData.brandshort + ' ' + pageTitle
+const makeTitle = siteData.brand + ' ' + pageTitle
 const makeDescription = pageTLDR
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 ---
 
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns#">
-	<head>
-		<Junglestar />
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+  <head>
+    <Junglestar />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
-		<title>{makeTitle}</title>
+    <title>{makeTitle}</title>
 
-		<meta
-			name="description"
-			content={pageTitle + ' | ' + siteData.description}
-		/>
-		<meta name="format-detection" content="telephone=no" />
-		<link rel="icon" type="image/svg+xml" href="/favicons/j.svg" />
-		<link rel="canonical" href={canonicalURL} />
+    <meta name="description" content={makeDescription} />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="icon" type="image/svg+xml" href="/favicons/j.svg" />
+    <link rel="canonical" href={canonicalURL} />
 
-		<!-- ROKS REPO -->
-		<meta name="version" content={repoData.version} />
+    <!-- ROKS REPO -->
+    <meta name="version" content={repoData.version} />
 
-		<!-- ROKS OG -->
-		<meta property="og:url" content={Astro.site} />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content={makeTitle} />
-		<meta property="og:description" content={makeDescription} />
-		<meta property="og:image" content={ogImage} />
+    <!-- ROKS OG -->
+    <meta property="og:url" content={Astro.site} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={makeTitle} />
+    <meta property="og:description" content={makeDescription} />
+    <meta property="og:image" content={ogImage} />
 
-		<!-- ROKS TWITTER -->
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={Astro.site} />
-		<meta name="twitter:title" content={makeTitle} />
-		<meta name="twitter:description" content={makeDescription} />
-		<meta name="twitter:image" content={ogImage} />
+    <!-- ROKS TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.site} />
+    <meta name="twitter:title" content={makeTitle} />
+    <meta name="twitter:description" content={makeDescription} />
+    <meta name="twitter:image" content={ogImage} />
 
-		<slot name="head" />
-	</head>
+    <slot name="head" />
+  </head>
 
-	<body class={bodyClass}>
-		<div id="top"></div>
-		<Header />
-		<main class={mainClass}>
-			<slot />
-		</main>
+  <body class={bodyClass}>
+    <div id="top"></div>
+    <Header />
+    <main class={mainClass}>
+      <slot />
+    </main>
 
-		<Footer />
-		<slot name="after-footer" />
+    <Footer />
+    <slot name="after-footer" />
 
-		<GoogleAnalytics />
-		<Stylo />
-	</body>
+    <GoogleAnalytics />
+    <Stylo />
+  </body>
 </html>

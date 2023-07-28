@@ -1,6 +1,7 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
+import * as siteData from '@data/site.json'
 import { Image } from 'astro:assets'
 
 export async function getStaticPaths() {
@@ -22,8 +23,11 @@ const { post } = Astro.props
 const { Content } = await post.render()
 const bodyClass = 'landmarks'
 const mainClass = ''
-const pageTLDR = ''
-const pageTitle = ''
+const pageTLDR = siteData.mission
+
+const str = post.slug
+const modStr = str[0].toUpperCase() + str.slice(1)
+const pageTitle = modStr
 ---
 
 <Layout
@@ -31,7 +35,8 @@ const pageTitle = ''
   mainClass={mainClass}
   bodyClass={bodyClass}
   pageTitle={pageTitle}
-  pageTLDR={pageTLDR}>
+  pageTLDR={pageTLDR}
+  ogImage={post.data.cover}>
   <div class="container">
     <h2>{post.data.building}</h2>
     <div class="architect">{post.data.architect}</div>
