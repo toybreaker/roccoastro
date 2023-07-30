@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  building: string
+  location?: string | null | undefined
+  country?: string | null | undefined
+  cover: any
+}
+
+const { building, location, country, cover } = Astro.props
+---
+
+<div class="card_full">
+  <div>
+    <Image
+      width={1920}
+      height={1280}
+      src={cover}
+      alt={building}
+      format="avif"
+      quality="low"
+    />
+    <div>{building}, {location}, {country}</div>
+    <br /><br />
+  </div>
+</div>
+
+<style lang="scss"></style>

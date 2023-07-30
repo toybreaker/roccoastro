@@ -1,6 +1,7 @@
 ---
+import CardFull from '@components/CardFull.astro'
 import Layout from '@layouts/Layout.astro'
-import { Image } from 'astro:assets'
+//import { Image } from 'astro:assets'
 import { getCollection } from 'astro:content'
 const jobs = await getCollection('residential')
 
@@ -29,14 +30,12 @@ const pageTLDR =
       jobs.map((job) => (
         <div>
           <a href={`/residential/${job.slug}`}>
-            <Image
-              src={job.data.cover}
-              alt={job.data.building}
-              width={1920}
-              height={1280}
+            <CardFull
+              building={job.data.building}
+              country={job.data.country}
+              location={job.data.location}
+              cover={job.data.cover}
             />
-            <br />
-            {job.data.building}, {job.data.location}, {job.data.country}
           </a>
         </div>
       ))

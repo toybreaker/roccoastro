@@ -6,7 +6,7 @@ const jobs = defineCollection({
       building: z.string(),
       location: z.string().optional().nullable(),
       country: z.string().optional().nullable(),
-      cover: z.string(image()),
+      cover: image(),
       architect: z.string().optional().nullable(),
       year: z.number().optional().nullable(),
       draft: z.boolean().optional().nullable()

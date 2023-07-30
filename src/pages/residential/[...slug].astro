@@ -2,7 +2,7 @@
 import { CollectionEntry, getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
 import * as siteData from '@data/site.json'
-import { Image } from 'astro:assets'
+//import { Image } from 'astro:assets'
 
 export async function getStaticPaths() {
   const posts = await getCollection('residential', ({ data }) => {
@@ -34,6 +34,8 @@ const pageTLDR =
 const str = post.slug
 const modStr = str[0].toUpperCase() + str.slice(1)
 const pageTitle = modStr
+
+console.log(post.data.cover)
 ---
 
 <Layout
@@ -42,7 +44,7 @@ const pageTitle = modStr
   bodyClass={bodyClass}
   pageTitle={pageTitle}
   pageTLDR={pageTLDR}
-  ogImage={post.data.cover}>
+  ogImage={post.data.cover.src}>
   <div class="container">
     <h2>{post.data.building}</h2>
     <div class="architect">{post.data.architect}</div>
