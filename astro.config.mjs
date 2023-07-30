@@ -21,18 +21,18 @@ export default defineConfig({
     inlineStylesheets: 'always'
   },
   integrations: [
-    partytown({
-      // Example: Add dataLayer.push as a forwarding-event.
-      config: {
-        forward: ['dataLayer.push']
-      }
-    }),
     sitemap(),
     robotsTxt(),
     mdx({
       extendMarkdownConfig: false,
       gfm: true,
       drafts: true
+    }),
+    partytown({
+      // Example: Add dataLayer.push as a forwarding-event.
+      config: {
+        forward: ['dataLayer.push']
+      }
     })
   ],
   outDir: './dist',

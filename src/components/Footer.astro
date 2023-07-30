@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon'
+const today = new Date()
 ---
 
 <footer>
@@ -10,13 +11,13 @@ import { Icon } from 'astro-icon'
 
     <a class="title" href="/" title="back to home page">
       <h2 class="h3">Rocco Marosi</h2>
-      <div class="footer_what">Architecture Photography</div>
+      <div>Architecture Photography</div>
     </a>
 
     <div class="contacts">
       <a
         title="send me an email"
-        class="footer_list_link mail open_in_new_window"
+        class="open_in_new_window"
         href="mailto:rocco.marosi@gmail.com"
         target="_blank"
         rel="noopener">
@@ -25,23 +26,21 @@ import { Icon } from 'astro-icon'
 
       <a
         title="connect using instagram"
-        class="footer_list_link gplus open_in_new_window"
+        class="open_in_new_window"
         href="https://www.instagram.com/rocco.marosi"
         target="_blank"
         rel="noopener">
         <Icon name="instagram" />
       </a>
 
-      <a
-        title="make QR code big"
-        class="footer_list_link qr_switch"
-        id="qr_switch">
+      <span title="QR code quick link">
         <Icon name="qr" />
-      </a>
+      </span>
     </div>
 
     <div class="copyright">
-      2023 © Rocco Marosi. <br />All rights reserved. <br />Powered by <a
+      2012-{today.getFullYear()} © Rocco Marosi. <br />All rights reserved. <br
+      />Powered by <a
         title="website powered by Junglestar, a one stop shop for all your internet needs - check it out"
         href="https://junglestar.org"
         target="_blank"

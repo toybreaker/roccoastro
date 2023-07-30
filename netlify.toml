@@ -1,0 +1,4 @@
+[[headers]]
+  from = "/assets/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
