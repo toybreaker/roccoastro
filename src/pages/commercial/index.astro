@@ -1,8 +1,13 @@
 ---
 import Layout from '@layouts/Layout.astro'
-//import { Image } from 'astro:assets'
+import Card from '@components/Card.astro'
 import { getCollection } from 'astro:content'
-const jobs = await getCollection('commercial')
+
+const jobs = (
+  await getCollection('commercial', ({ data }) => {
+    return data.draft !== true
+  })
+).sort((a, b) => b.data.year - a.data.year)
 
 interface Props {
   bodyClass: string
@@ -13,7 +18,7 @@ interface Props {
 
 const bodyClass = 'commercial'
 const mainClass = 'no_padding'
-const pageTitle = 'Architecture Photography | Commercial'
+const pageTitle = 'Commercial Architecture Photography'
 const pageTLDR =
   'In commercial markets, HIGH QUALITY PHOTOGRAPHY can help your business make it to the next level'
 ---
@@ -25,16 +30,37 @@ const pageTLDR =
   pageTLDR={pageTLDR}
   ogImage="../og_commercial.jpg">
   <div class="container">
-    <ul>
-      {
-        jobs.map((job) => (
-          <li>
-            <a href={`/commercial/${job.slug}`}>
-              {job.data.building}, {job.data.location}, {job.data.country}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    {
+      jobs.map((job) => (
+        <a href={`/commercial/${job.slug}`}>
+          <Card
+            building={job.data.building}
+            country={job.data.country}
+            cover={job.data.cover}
+          />
+        </a>
+      ))
+    }
   </div>
 </Layout>
+
+<style lang="scss">
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    user-select: none !important;
+    display: block;
+    padding-bottom: var(--spacing);
+    width: 100%;
+    @media (min-width: 576px) {
+      width: 48%;
+      padding: 1% 1% var(--spacing) 1%;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+</style>

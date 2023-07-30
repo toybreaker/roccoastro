@@ -8,7 +8,7 @@ const jobs = defineCollection({
       country: z.string().optional().nullable(),
       cover: image(),
       architect: z.string().optional().nullable(),
-      year: z.number().optional().nullable(),
+      year: z.number(),
       draft: z.boolean().optional().nullable()
     })
 })

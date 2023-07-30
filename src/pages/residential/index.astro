@@ -1,9 +1,13 @@
 ---
-import CardFull from '@components/CardFull.astro'
 import Layout from '@layouts/Layout.astro'
-//import { Image } from 'astro:assets'
+import Card from '@components/Card.astro'
 import { getCollection } from 'astro:content'
-const jobs = await getCollection('residential')
+
+const jobs = (
+  await getCollection('residential', ({ data }) => {
+    return data.draft !== true
+  })
+).sort((a, b) => b.data.year - a.data.year)
 
 interface Props {
   bodyClass: string
@@ -14,9 +18,9 @@ interface Props {
 
 const bodyClass = 'residential'
 const mainClass = 'no_padding'
-const pageTitle = 'Architecture Photography | Residential'
+const pageTitle = 'Residential Architecture Photography '
 const pageTLDR =
-  'In today residential markets, HIGH QUALITY PHOTOGRAPHY is paramount to compete and get noticed.'
+  'In today real estate markets, HIGH QUALITY PHOTOGRAPHY is paramount to compete and get noticed.'
 ---
 
 <Layout
@@ -28,17 +32,35 @@ const pageTLDR =
   <div class="container">
     {
       jobs.map((job) => (
-        <div>
-          <a href={`/residential/${job.slug}`}>
-            <CardFull
-              building={job.data.building}
-              country={job.data.country}
-              location={job.data.location}
-              cover={job.data.cover}
-            />
-          </a>
-        </div>
+        <a href={`/residential/${job.slug}`}>
+          <Card
+            building={job.data.building}
+            country={job.data.country}
+            cover={job.data.cover}
+          />
+        </a>
       ))
     }
   </div>
 </Layout>
+
+<style lang="scss">
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  a {
+    user-select: none !important;
+    display: block;
+    padding-bottom: var(--spacing);
+    width: 100%;
+    @media (min-width: 576px) {
+      width: 48%;
+      padding: 1% 1% var(--spacing) 1%;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+</style>
