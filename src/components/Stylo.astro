@@ -54,22 +54,25 @@ import '../assets/css/pico.css'
     --nav-element-spacing-horizontal: 0.25rem;
     //rok
     --paragraph_width: 60ch;
-    --corner_distance: calc(2.5vw + 2.5vh);
+    --corner_distance: calc(2vw + 2vh);
     --corner_dimension: calc(7vw + 7vh);
   }
   @media (min-width: 576px) {
     :root {
       --font-size: 22px;
+      --corner_distance: calc(2.25vw + 2.25vh);
     }
   }
   @media (min-width: 768px) {
     :root {
       --font-size: 23px;
+      --corner_distance: calc(2.5vw + 2.25vh);
     }
   }
   @media (min-width: 992px) {
     :root {
       --font-size: 24px;
+      --corner_distance: calc(2.75vw + 2.75vh);
     }
   }
   @media (min-width: 1200px) {
@@ -81,11 +84,13 @@ import '../assets/css/pico.css'
   @media (min-width: 1440px) {
     :root {
       --font-size: 28px;
+      --corner_distance: calc(4vw + 4vh);
     }
   }
   @media (min-width: 1920px) {
     :root {
       --font-size: 32px;
+      --corner_distance: calc(5vw + 5vh);
     }
   }
 
@@ -395,5 +400,55 @@ import '../assets/css/pico.css'
   .primary {
     text-transform: uppercase;
     color: var(--primary);
+  }
+
+  .wide {
+    padding-top: calc(var(--corner_distance) * 2);
+    padding-bottom: calc(var(--corner_distance) * 2);
+    padding-left: var(--corner_distance);
+    padding-right: var(--corner_distance);
+    &.flex {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .big_link {
+    display: block;
+    padding-bottom: var(--corner_distance);
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .year:before {
+    content: 'Built year: ';
+    padding-right: 10px;
+    font-size: 80%;
+    opacity: 0.75;
+  }
+  .year:empty {
+    display: none;
+  }
+
+  .architect:before {
+    content: 'Architect: ';
+    padding-right: 10px;
+    font-size: 80%;
+    opacity: 0.75;
+  }
+  .architect:empty {
+    display: none;
+  }
+
+  .location:before {
+    content: 'Location: ';
+    padding-right: 10px;
+    font-size: 80%;
+    opacity: 0.75;
+  }
+  .location:empty {
+    display: none;
   }
 </style>

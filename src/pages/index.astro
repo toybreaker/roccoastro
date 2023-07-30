@@ -1,5 +1,19 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import Card from '@components/CardHome.astro'
+
+const featRes = await getCollection('residential', ({ data }) => {
+  return data.featured === true
+})
+
+const featCom = await getCollection('commercial', ({ data }) => {
+  return data.featured === true
+})
+
+const featLan = await getCollection('landmarks', ({ data }) => {
+  return data.featured === true
+})
 
 interface Props {
   pageTitle: string
@@ -22,5 +36,41 @@ const mainClass = 'no_padding'
   mainClass={mainClass}
   pageTLDR={pageTLDR}
   ogImage="../og_home.jpg">
-  <div class="container"></div>
+  <div class="wide">
+    {
+      featRes.map((job) => (
+        <a class="big_link" href={`/residential/${job.slug}`}>
+          <Card
+            building={job.data.building}
+            country={job.data.country}
+            cover={job.data.cover}
+          />
+        </a>
+      ))
+    }
+
+    {
+      featCom.map((job) => (
+        <a class="big_link" href={`/commercial/${job.slug}`}>
+          <Card
+            building={job.data.building}
+            country={job.data.country}
+            cover={job.data.cover}
+          />
+        </a>
+      ))
+    }
+    {
+      featLan.map((job) => (
+        <a class="big_link" href={`/landmarks/${job.slug}`}>
+          <Card
+            building={job.data.building}
+            country={job.data.country}
+            cover={job.data.cover}
+          />
+        </a>
+      ))
+    }
+  </div>
 </Layout>
+<style lang="scss"></style>

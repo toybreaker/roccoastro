@@ -21,7 +21,9 @@ interface Props {
 
 const { post } = Astro.props
 const { Content } = await post.render()
-const bodyClass = 'commercial'
+
+const collection = 'commercial'
+const bodyClass = collection
 const mainClass = ''
 const pageTLDR =
   siteData.mission +
@@ -43,7 +45,7 @@ const pageTitle = modStr
   pageTitle={pageTitle}
   pageTLDR={pageTLDR}
   ogImage={post.data.cover.src}>
-  <div class="container">
+  <div class="wide">
     <h2>{post.data.building}</h2>
     <div class="architect">{post.data.architect}</div>
     <div class="location">
@@ -51,42 +53,15 @@ const pageTitle = modStr
     </div>
     <div class="year">{post.data.year}</div>
     <br />
+
+    <Content />
   </div>
-  <Content />
+
+  <div class="wide flex">
+    <a role="button" class="outline contrast" href={'/' + collection + '/'}>
+      See all {collection.toUpperCase()} works</a
+    >
+  </div>
 </Layout>
 
-<style lang="scss">
-  .container {
-    padding-bottom: var(--spacing);
-  }
-
-  .year:before {
-    content: 'Built year: ';
-    padding-right: 10px;
-    font-size: 80%;
-    opacity: 0.75;
-  }
-  .year:empty {
-    display: none;
-  }
-
-  .architect:before {
-    content: 'Architect: ';
-    padding-right: 10px;
-    font-size: 80%;
-    opacity: 0.75;
-  }
-  .architect:empty {
-    display: none;
-  }
-
-  .location:before {
-    content: 'Location: ';
-    padding-right: 10px;
-    font-size: 80%;
-    opacity: 0.75;
-  }
-  .location:empty {
-    display: none;
-  }
-</style>
+<style lang="scss"></style>

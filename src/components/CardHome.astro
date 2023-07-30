@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  building: string
+  country?: string | null | undefined
+  cover: any
+}
+
+const { building, country, cover } = Astro.props
+---
+
+<Image
+  width={1920}
+  height={1280}
+  src={cover}
+  alt={building}
+  format="avif"
+  quality="mid"
+/>
+<div class="centre">{building}, {country}</div>
+
+<style lang="scss">
+  img {
+    padding-bottom: 0 !important;
+  }
+</style>
