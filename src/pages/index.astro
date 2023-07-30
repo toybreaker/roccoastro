@@ -1,10 +1,5 @@
 ---
 import Layout from '@layouts/Layout.astro'
-//import * as data from '@data/home.json'
-//import { Image } from 'astro:assets'
-
-// const allProjects = data.projects
-// const projects = allProjects
 
 interface Props {
   pageTitle: string
@@ -27,23 +22,5 @@ const mainClass = 'no_padding'
   mainClass={mainClass}
   pageTLDR={pageTLDR}
   ogImage="../og_home.jpg">
-  <div class="container">
-    <!-- {
-      projects.map((project) => (
-        <>
-          <div>
-            <small>
-              <span>{project.building}</span>
-              <span>{project.location}</span>
-              <span>{project.country}</span> •
-              <span>
-                {project.architect}, <small>photo © Rocco Marosi</small>
-              </span>
-            </small>
-            <br />
-          </div>
-        </>
-      ))
-    } -->
-  </div>
+  <div class="container"></div>
 </Layout>
