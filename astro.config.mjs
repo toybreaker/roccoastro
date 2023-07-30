@@ -36,6 +36,6 @@ export default defineConfig({
     })
   ],
   outDir: './dist',
-  site: 'https://roccomarosi.com/',
+  site: 'https://n.roccomarosi.com/',
   base: '/'
 })
