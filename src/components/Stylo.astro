@@ -1,5 +1,5 @@
 ---
-import '../assets/css/pico.css'
+import '../assets/css/pico.slim.css'
 ---
 
 <style is:global lang="scss">
@@ -7,10 +7,12 @@ import '../assets/css/pico.css'
   /* Can be forced with data-theme="light" */
   [data-theme='light'],
   :root:not([data-theme='dark']) {
-    --primary: #546e7a;
-    --primary-hover: #455a64;
-    --primary-focus: rgba(84, 110, 122, 0.125);
+    --primary: hsla(199, 18%, 34%, 1);
+    --primary-hover: hsla(199, 18%, 24%, 1);
+    --primary-focus: hsla(199, 18%, 40%, 0.12);
     --primary-inverse: #000;
+    --primary-inverse-text: hsla(199, 18%, 45%, 1);
+    --background-color: #fff;
     --soft_overlay_color: hsla(0, 0%, 0%, 0.05);
   }
 
@@ -18,10 +20,12 @@ import '../assets/css/pico.css'
   /* Automatically enabled if user has Dark mode enabled */
   @media only screen and (prefers-color-scheme: dark) {
     :root:not([data-theme]) {
-      --primary: #546e7a;
-      --primary-hover: #607d8b;
-      --primary-focus: rgba(84, 110, 122, 0.25);
+      --primary: hsla(199, 18%, 65%, 1);
+      --primary-hover: hsla(200, 18%, 75%, 1);
+      --primary-focus: hsla(199, 18%, 40%, 0.25);
       --primary-inverse: #fff;
+      --primary-inverse-text: hsla(199, 18%, 35%, 1);
+      --background-color: hsla(206, 29%, 9%, 1);
       --soft_overlay_color: hsla(0, 0%, 0%, 0.25);
     }
   }
@@ -29,10 +33,12 @@ import '../assets/css/pico.css'
   /* Dark scheme (Forced) */
   /* Enabled if forced with data-theme="dark" */
   [data-theme='dark'] {
-    --primary: #546e7a;
-    --primary-hover: #607d8b;
-    --primary-focus: rgba(84, 110, 122, 0.25);
+    --primary: hsla(199, 18%, 65%, 1);
+    --primary-hover: hsla(200, 18%, 75%, 1);
+    --primary-focus: hsla(199, 18%, 40%, 0.25);
     --primary-inverse: #fff;
+    --primary-inverse-text: hsla(199, 18%, 35%, 1);
+    --background-color: hsla(206, 29%, 9%, 1);
     --soft_overlay_color: hsla(0, 0%, 0%, 0.25);
   }
 
@@ -56,6 +62,8 @@ import '../assets/css/pico.css'
     --paragraph_width: 60ch;
     --corner_distance: calc(2vw + 2vh);
     --corner_dimension: calc(7vw + 7vh);
+    --form-element-background-color: var(--background-color);
+    --mark-color: var(--background-color);
   }
   @media (min-width: 576px) {
     :root {

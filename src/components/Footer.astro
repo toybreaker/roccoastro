@@ -52,10 +52,10 @@ const today = new Date()
   </div>
 </footer>
 
-<style>
+<style lang="scss">
   footer {
     background-color: var(--primary-inverse) !important;
-    color: var(--primary) !important;
+    color: var(--primary-inverse-text) !important;
     height: 100vh;
   }
   .container {
@@ -72,17 +72,22 @@ const today = new Date()
   svg {
     width: 50px;
     height: 50px;
+    color: var(--primary-inverse-text) !important;
   }
   h2 {
     margin: 0 !important;
-    color: var(--primary) !important;
+    color: var(--primary-inverse-text) !important;
   }
-  a:hover {
-    text-decoration: none;
+  a {
+    color: var(--primary-inverse-text) !important;
+    &:hover {
+      text-decoration: none;
+    }
   }
   .title {
     display: block;
     padding-bottom: var(--spacing);
+    color: var(--primary-inverse-text) !important;
   }
   .copyright {
     padding-top: var(--spacing);
