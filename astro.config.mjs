@@ -4,7 +4,6 @@ import robotsTxt from 'astro-robots-txt'
 import partytown from '@astrojs/partytown'
 import mdx from '@astrojs/mdx'
 
-// https://astro.build/config
 export default defineConfig({
   experimental: {
     assets: true
@@ -26,7 +25,7 @@ export default defineConfig({
     })
   ],
   outDir: './dist',
-  site: 'https://n.roccomarosi.com/',
+  site: 'https://roccomarosi.com/',
   base: '/',
   build: {
     // The 'auto' option will inline only the stylesheets that are below the vite.build.assetsInlineLimit threshold,

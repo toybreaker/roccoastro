@@ -6,6 +6,7 @@ import Stylo from '@components/Stylo.astro'
 import * as siteData from '@data/site.json'
 import * as repoData from 'package.json'
 import GoogleAnalytics from '@scripts/GoogleAnalytics.astro'
+import AppendToCopyAction from '@scripts/AppendToCopyAction.astro'
 
 interface Props {
   pageTitle: string
@@ -67,5 +68,6 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
     <GoogleAnalytics />
     <Stylo />
+    <AppendToCopyAction />
   </body>
 </html>
