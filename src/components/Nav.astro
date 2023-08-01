@@ -78,5 +78,20 @@
       padding-left: 15px !important;
       padding-right: 15px !important;
     }
+    &:not(.active) {
+      opacity: 0.5;
+    }
   }
 </style>
+
+<script>
+  var section = window.location.pathname.split('/')[1]
+
+  const activeNavigationElement = document.querySelector(
+    `nav a[href*="${section}"]`
+  )
+
+  if (activeNavigationElement) {
+    activeNavigationElement.classList.add('active')
+  }
+</script>
