@@ -17,8 +17,8 @@ dependencies:
     specifier: ^2.10.1
     version: 2.10.1(sass@1.64.2)
   astro-auto-import:
-    specifier: ^0.3.0
-    version: 0.3.0(astro@2.10.1)
+    specifier: ^0.3.1
+    version: 0.3.1(astro@2.10.1)
   astro-icon:
     specifier: ^0.8.1
     version: 0.8.1
@@ -1083,8 +1083,8 @@ packages:
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
     dev: false
 
-  /@types/node@18.17.2:
-    resolution: {integrity: sha512-wBo3KqP/PBqje5TI9UTiuL3yWfP6sdPtjtygSOqcYZWT232dfDeDOnkDps5wqZBP9NgGgYrNejinl0faAuE+HQ==}
+  /@types/node@18.17.3:
+    resolution: {integrity: sha512-2x8HWtFk0S99zqVQABU9wTpr8wPoaDHZUcAkoTKH+nL7kPv3WUI9cRi/Kk5Mz4xdqXSqTkKP7IWNoQQYCnDsTA==}
     dev: false
 
   /@types/parse5@6.0.3:
@@ -1365,13 +1365,13 @@ packages:
     hasBin: true
     dev: false
 
-  /astro-auto-import@0.3.0(astro@2.10.1):
-    resolution: {integrity: sha512-EfpraN8R1K27ka+/qj3rsUXPf0Zd/74gZTP2IHd+4dvZsXeCEB/ZzxoxLG4QJ3n5Zpxh0uHiWFUcjomJLGWUEw==}
+  /astro-auto-import@0.3.1(astro@2.10.1):
+    resolution: {integrity: sha512-4kXZMlZFiq3dqT6fcfPbCjHTABQ279eKbIqZAb6qktBhGlmHwpHr1spOUFj/RQFilaWVgfjzOBmuZnoydZb5Vg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
-      astro: ^2.0.0
+      astro: ^2.0.0 || ^3.0.0-beta
     dependencies:
-      '@types/node': 18.17.2
+      '@types/node': 18.17.3
       acorn: 8.10.0
       astro: 2.10.1(sass@1.64.2)
     dev: false
