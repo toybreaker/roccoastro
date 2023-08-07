@@ -12,7 +12,7 @@
     "astro": "astro",
     "lint": "prettier --write  \"**/*.{js,jsx,ts,tsx,md,mdx,astro}\" && eslint --fix \"src/**/*.{js,ts,jsx,tsx,astro}\""
   },
-  "dependencies": {
+  "devDependencies": {
     "@astrojs/mdx": "^0.19.7",
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/sitemap": "^2.0.1",
@@ -28,6 +28,7 @@
     "prettier": "^2.8.8",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-astro": "^0.9.1",
-    "sass": "^1.64.2"
+    "sass": "^1.64.2",
+    "sharp": "^0.32.4"
   }
 }
