@@ -10,18 +10,22 @@ interface Props {
 const { building, country, cover } = Astro.props
 ---
 
-<Image
-  width={960}
-  height={640}
-  src={cover}
-  alt={building}
-  format="avif"
-  quality="mid"
-/>
-<div class="centre">{building}, {country}</div>
-
+<div class="card">
+  <Image
+    width={960}
+    height={640}
+    src={cover}
+    alt={building}
+    format="avif"
+    quality="mid"
+  />
+  <div class="centre">{building}, {country}</div>
+</div>
 <style lang="scss">
-  img {
-    padding-bottom: 0 !important;
+  .card {
+    img {
+      width: fit-content;
+      padding-bottom: 0 !important;
+    }
   }
 </style>

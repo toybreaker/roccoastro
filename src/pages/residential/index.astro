@@ -29,7 +29,7 @@ const pageTLDR =
   mainClass={mainClass}
   pageTLDR={pageTLDR}
   ogImage="../og_residential.jpg">
-  <div class="wide">
+  <div class="wide flex">
     {
       jobs.map((job) => (
         <a href={`/residential/${job.slug}`}>
@@ -45,10 +45,6 @@ const pageTLDR =
 </Layout>
 
 <style lang="scss">
-  .wide {
-    display: flex;
-    flex-wrap: wrap;
-  }
   a {
     user-select: none !important;
     display: block;

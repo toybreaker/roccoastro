@@ -10,7 +10,8 @@ const jobs = defineCollection({
       architect: z.string().optional().nullable(),
       year: z.number(),
       draft: z.boolean().optional().nullable(),
-      featured: z.boolean().optional().nullable()
+      featured: z.boolean().optional().nullable(),
+      quality: z.string().optional().nullable().default('low')
     })
 })
 

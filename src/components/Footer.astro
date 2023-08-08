@@ -1,6 +1,13 @@
 ---
 import { Icon } from 'astro-icon'
+import * as repoData from 'package.json'
 const today = new Date()
+
+interface Props {
+  version: any
+}
+
+console.log(repoData.version)
 ---
 
 <footer>
@@ -39,9 +46,13 @@ const today = new Date()
     </div>
 
     <div class="copyright">
-      2012-{today.getFullYear()} © Rocco Marosi. <br />All rights reserved. <br
-      />Powered by <a
-        title="website powered by Junglestar, a one stop shop for all your internet needs - check it out"
+      2012-{today.getFullYear()} © Rocco Marosi. <br /><small
+        >All rights reserved.</small
+      >
+      <br /><small>Some property names are fortuitous.</small><br /><small
+        >Powered by
+      </small><a
+        title={'JUNGLE STARRING ROCCO MAROSI | v' + repoData.version}
         href="https://junglestar.org"
         target="_blank"
         class="open_in_new_window"
