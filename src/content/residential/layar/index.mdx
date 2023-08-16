@@ -1,0 +1,18 @@
+---
+building: Layar
+location: Bali
+country: Indonesia
+architect: G.Francione, M.Garavoglia
+year: 2008
+cover: './081111-photographer-rocco-marosi-2292.jpg'
+quality: mid # (low (default), mid, high, max)
+---
+
+import p01 from './081111-photographer-rocco-marosi-2292.jpg'
+import p02 from './081111-photographer-rocco-marosi-2310.jpg'
+import p03 from './081111_photo_rokma__MG_2306.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />

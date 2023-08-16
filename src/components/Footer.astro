@@ -2,12 +2,6 @@
 import { Icon } from 'astro-icon'
 import * as repoData from 'package.json'
 const today = new Date()
-
-interface Props {
-  version: any
-}
-
-console.log(repoData.version)
 ---
 
 <footer>
@@ -50,7 +44,7 @@ console.log(repoData.version)
         >All rights reserved.</small
       >
       <br /><small>Some property names are fortuitous.</small><br /><small
-        >Powered by
+        >{'v' + repoData.version}. Powered by
       </small><a
         title={'JUNGLE STARRING ROCCO MAROSI | v' + repoData.version}
         href="https://junglestar.org"
