@@ -1,0 +1,23 @@
+---
+building: Modern and Traditional
+location: Bangkok
+country: Thailand
+architect:
+year: 2011
+cover: './110405_photo_rocco-marosi_MG_8383.jpg'
+featured: true
+quality: max # (low (default), mid, high, max)
+---
+
+import p01 from './110405_photo_rocco-marosi_MG_8383.jpg'
+import p02 from './110421_photo_rocco-marosi_MG_9615.jpg'
+import p03 from './110709_photo_rocco-marosi_MG_9683.jpg'
+import p04 from './110823_photo_rocco-marosi_MG_5027.jpg'
+import p05 from './120210_photo_rocco-marosi_MG_8745.jpg'
+import Slide from '@components/Slide.astro'
+
+<Slide p={p01} alt={frontmatter.building} />
+<Slide p={p04} alt={frontmatter.building} />
+<Slide p={p02} alt={frontmatter.building} />
+<Slide p={p05} alt={frontmatter.building} />
+<Slide p={p03} alt={frontmatter.building} />
