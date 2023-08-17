@@ -1,7 +1,7 @@
 {
   "name": "roccoastro",
   "type": "module",
-  "version": "1.3.6",
+  "version": "1.3.7",
   "scripts": {
     "dev": "astro dev",
     "check": "astro check --watch & astro dev",
