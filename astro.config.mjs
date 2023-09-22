@@ -1,28 +1,27 @@
-import { defineConfig, sharpImageService } from 'astro/config';
-import sitemap from '@astrojs/sitemap';
-import robotsTxt from 'astro-robots-txt';
-import partytown from '@astrojs/partytown';
-import mdx from '@astrojs/mdx';
+import { defineConfig } from 'astro/config'
+import sitemap from '@astrojs/sitemap'
+import robotsTxt from 'astro-robots-txt'
+import partytown from '@astrojs/partytown'
+import mdx from '@astrojs/mdx'
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
-  image: {
-    service: sharpImageService()
-  },
   markdown: {
     drafts: true
   },
-  integrations: [mdx({
-    drafts: true
-  }), sitemap(), robotsTxt(), partytown({
-    // Example: Add dataLayer.push as a forwarding-event.
-    config: {
-      forward: ['dataLayer.push']
-    }
-  })],
+  integrations: [
+    mdx({
+      drafts: true
+    }),
+    sitemap(),
+    robotsTxt(),
+    partytown({
+      // Example: Add dataLayer.push as a forwarding-event.
+      config: {
+        forward: ['dataLayer.push']
+      }
+    })
+  ],
   outDir: './dist',
   site: 'https://roccomarosi.com/',
   base: '/',
@@ -36,4 +35,4 @@ export default defineConfig({
     // inline all stylesheets:
     inlineStylesheets: 'always'
   }
-});
+})
