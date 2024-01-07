@@ -17,19 +17,23 @@
     "@astrojs/partytown": "^1.2.3",
     "@astrojs/sitemap": "^2.0.2",
     "@types/google.analytics": "^0.0.42",
-    "@typescript-eslint/parser": "^6.7.2",
-    "astro": "^3.1.2",
-    "astro-auto-import": "^0.3.1",
-    "astro-icon": "^0.8.1",
+    "@typescript-eslint/parser": "^6.17.0",
+    "astro": "^3.6.4",
+    "astro-auto-import": "^0.3.2",
+    "astro-icon": "^0.8.2",
     "astro-robots-txt": "^0.5.0",
-    "eslint": "^8.49.0",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-astro": "^0.27.2",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "prettier": "^2.8.8",
     "prettier-config-standard": "^5.0.0",
     "prettier-plugin-astro": "^0.9.1",
-    "sass": "^1.68.0",
+    "sass": "^1.69.6",
     "sharp": "^0.32.6"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.3.4",
+    "typescript": "^5.3.3"
   }
 }
